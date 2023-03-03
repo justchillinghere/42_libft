@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 21:25:22 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/03 12:16:46 by luchitel         ###   ########.fr       */
+/*   Created: 2023/03/03 14:48:00 by luchitel          #+#    #+#             */
+/*   Updated: 2023/03/03 17:44:09 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+#include "libft.h"
+
+void*	ft_memmove(void *dst, const void *src, size_t len)
 {
-	while (*str)
+	char		*cdst;
+	const char	*csrc;
+
+	cdst = dst;
+	csrc = src;
+	if (cdst == csrc)
+		return (dst);
+	if (cdst > csrc)
 	{
-		if (*str < 48 || *str > 57)
+		while (len > 0)
 		{
-			return (0);
+			cdst[len - 1] =  csrc[len - 1];
+			len--;
 		}
-		str++;
+
 	}
-	return (1);
+	else 
+		ft_memcpy(cdst, csrc, len);
+	return (dst);
 }

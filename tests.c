@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:40:18 by luchitel          #+#    #+#             */
-/*   Updated: 2023/02/26 09:50:18 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/03 15:46:05 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,17 @@ int	test_memcpy(void)
 	return (1);
 }
 
+int	test_memmove(void)
+{
+	const char src[50] = "tytulsjrlfkjnsa";
+	char dest[50];
+	strcpy(dest,"Heloooo!!");
+	printf("Before memmove dest = %s\n", dest);
+	ft_memmove(dest, src, strlen(src)+1);
+	printf("After memmove dest = %s\n", dest);
+	return (1);
+}
+
 int	main(void)
 {
 	if (!test_isalpha())
@@ -97,6 +108,8 @@ int	main(void)
 	if (!test_memset())
 		return (1);
 	if (!test_memcpy())
+		return (1);
+	if (!test_memmove())
 		return (1);
 	return (0);
 }
