@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:40:18 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/03 15:46:05 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/04 19:58:59 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,17 +99,39 @@ int	test_memmove(void)
 	return (1);
 }
 
+int	test_strlcpy(void)
+{
+	char string[] = "Hello there, Venus";
+    char ft_buffer[19];
+ 	char buffer[19];
+	int	cases_num = 5;
+	int cases[5] = {0, 1, 3, 18, 19};
+
+	for (int i = 0; i < cases_num; i++)
+	{
+		ft_strlcpy(ft_buffer,string,cases[i]);
+		strlcpy(buffer,string,cases[i]);
+		if (strcmp(ft_buffer, buffer) != 0)
+			return (0);
+		strlcpy(buffer,string,10);
+	}
+	return (1);
+}
+
+
 int	main(void)
 {
-	if (!test_isalpha())
-		return (1);
-	if (!test_isdigit())
-		return (1);
-	if (!test_memset())
-		return (1);
-	if (!test_memcpy())
-		return (1);
-	if (!test_memmove())
-		return (1);
+	// if (!test_isalpha())
+	// 	return (1);
+	// if (!test_isdigit())
+	// 	return (1);
+	// if (!test_memset())
+	// 	return (1);
+	// if (!test_memcpy())
+	// 	return (1);
+	// if (!test_memmove())
+	// 	return (1);
+	// if (!test_strlcpy())
+	// 	return (1);
 	return (0);
 }

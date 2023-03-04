@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 12:46:26 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/04 16:32:10 by luchitel         ###   ########.fr       */
+/*   Created: 2023/03/03 18:34:24 by luchitel          #+#    #+#             */
+/*   Updated: 2023/03/04 17:35:43 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Like memset, but for strings
-*/
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+size_t	ft_strlcpy(char * restrict dest, const char * restrict src, size_t dstsize)
 {
-	unsigned char		*ch;
-	unsigned const char	*cch;
+	int	len;
 
-	ch = dst;
-	cch = src;
-	while (n-- > 0)
-		*ch++ = *cch++;
-	return (dst);
+	len = ft_strlen(src);
+	if (len < (int) dstsize)
+	{
+		ft_memcpy(dest, src, len);
+		dest[len] = '\0';
+	}
+	else if(dstsize != 0)
+	{
+		ft_memcpy(dest, src, dstsize - 1);
+		dest[dstsize - 1] = '\0';
+	}
+	return (len);
 }

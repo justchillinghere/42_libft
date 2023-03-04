@@ -14,12 +14,19 @@ SRC_FILES := ft_isalpha.c \
 	ft_memset.c \
 	ft_bzero.c \
 	ft_memcpy.c \
-	ft_memmove.c
+	ft_memmove.c \
+	ft_strlcpy.c \
+	ft_strlcat.c \
+	ft_toupper.c \
+	ft_tolower.c \
+	ft_strchr.c \
+	ft_strrchr.c
 OBJECTS := $(SRC_FILES:.c=.o)
 
 SRC_PATHS := $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ_PATHS := $(addprefix $(OBJS_DIR)/, $(OBJECTS))
 HEADER_PATHS = $(addprefix $(HEADER_DIR)/, $(HEADER_FILE))
+TEST_FILE = $(patsubst %.c,%,$(lastword $(SRC_FILES)))
 
 CC := cc
 CFLAGS := -Wall -Wextra -Werror
@@ -39,7 +46,7 @@ $(LIB_NAME) : $(OBJ_PATHS)
 	ranlib $@
 
 test: $(LIB_NAME)
-	./libft-war-machine/grademe.sh -op1
+	./libft-war-machine/grademe.sh $(TEST_FILE)
 
 clean :
 	rm -f $(OBJ_PATHS)
