@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:40:18 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/04 19:58:59 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/05 21:07:17 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,14 @@ int	test_strlcpy(void)
 	return (1);
 }
 
+int	test_strnstr(void)
+{
+	
+	printf("%s\n", (strnstr("lorem ipsum dolor sit amet", "dolor", 0)));
+	printf("%s\n", (ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0)));
+	return (1);
+}
+
 
 int	main(void)
 {
@@ -133,5 +141,7 @@ int	main(void)
 	// 	return (1);
 	// if (!test_strlcpy())
 	// 	return (1);
+	if (!test_strnstr())
+		return (1);
 	return (0);
 }
