@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 21:18:19 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/05 21:26:01 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:28:28 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_atoi(const char *orig_str)
 {
-	int	result;
-	int	sign;
+	int		result;
+	int		sign;
 	char	*str;
 
 	result = 0;
 	sign = 1;
 	str = (char *) orig_str;
-	while (*str == ' ' || *str == '\f' || *str == '\n' 
-	|| *str == '\r' || *str == '\t' || *str == '\v')
+	while (*str == ' ' || *str == '\f' || *str == '\n'
+		|| *str == '\r' || *str == '\t' || *str == '\v')
 		str++;
 	if (*str == '-' || *str == '+')
 	{

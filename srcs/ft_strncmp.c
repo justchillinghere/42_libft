@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 00:15:19 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/05 20:35:34 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:23:55 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while ((s1[i] || s2[i]) && (i < n))
 	{
 		if (s1[i] != s2[i])
-			return (ft_normalize((unsigned char) s1[i] - (unsigned char) s2[i]));
+			return (ft_normalize((unsigned char) s1[i]
+					- (unsigned char) s2[i]));
 		i++;
 	}
 	return (0);

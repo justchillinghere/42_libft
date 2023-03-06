@@ -6,13 +6,13 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:48:00 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/03 18:27:33 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:24:19 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void*	ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char		*cdst;
 	const char	*csrc;
@@ -22,9 +22,9 @@ void*	ft_memmove(void *dst, const void *src, size_t len)
 		cdst = dst + len;
 		csrc = src + len;
 		while (len-- > 0)
-			*--cdst = *--csrc; // pre-increment cause len is one byte more than the last character
+			*--cdst = *--csrc;
 	}
-	else 
+	else
 	{
 		cdst = dst;
 		csrc = src;
