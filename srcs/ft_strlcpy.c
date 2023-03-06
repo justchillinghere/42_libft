@@ -6,13 +6,13 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 18:34:24 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/04 17:35:43 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/05 21:28:26 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char * restrict dest, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
 	int	len;
 

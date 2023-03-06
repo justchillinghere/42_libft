@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 12:46:26 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/04 16:32:10 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/05 21:27:56 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ Like memset, but for strings
 */
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char		*ch;
 	unsigned const char	*cch;
