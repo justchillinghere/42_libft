@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 17:01:22 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/06 18:06:00 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/07 08:36:03 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void *ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *src);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
