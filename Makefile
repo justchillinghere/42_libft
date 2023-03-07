@@ -30,7 +30,8 @@ SRC_FILES := ft_isalpha.c \
 	ft_strdup.c \
 	ft_substr.c \
 	ft_strjoin.c \
-	ft_strtrim.c
+	ft_strtrim.c \
+	ft_split.c
 OBJECTS := $(SRC_FILES:.c=.o)
 
 SRC_PATHS := $(addprefix $(SRC_DIR)/, $(SRC_FILES))
