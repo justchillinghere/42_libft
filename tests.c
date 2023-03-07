@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:40:18 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/05 21:07:17 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/07 18:38:09 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,22 +126,16 @@ int	test_strnstr(void)
 	return (1);
 }
 
+int	test_itoa(void)
+{
+	
+	printf("%s\n", ft_itoa(-1234));
+	return (1);
+}
 
 int	main(void)
 {
-	// if (!test_isalpha())
-	// 	return (1);
-	// if (!test_isdigit())
-	// 	return (1);
-	// if (!test_memset())
-	// 	return (1);
-	// if (!test_memcpy())
-	// 	return (1);
-	// if (!test_memmove())
-	// 	return (1);
-	// if (!test_strlcpy())
-	// 	return (1);
-	if (!test_strnstr())
+	if (!test_itoa())
 		return (1);
 	return (0);
 }
