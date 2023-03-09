@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:40:18 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/09 20:15:25 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/09 22:16:35 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	test_memcmp(void)
 
 int	main(void)
 {
-	if (!test_memcmp())
+	if (!test_strnstr())
 		return (1);
 	return (0);
 }

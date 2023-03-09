@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 00:03:43 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/06 09:33:52 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/09 20:29:45 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + ft_strlen(s)));
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			last_pos = i;
 		i++;
 	}
