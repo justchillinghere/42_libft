@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/09 12:13:31 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/09 13:52:04 by luchitel         ###   ########.fr       */
+/*   Created: 2023/03/09 14:52:17 by luchitel          #+#    #+#             */
+/*   Updated: 2023/03/09 14:53:54 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
+	char	*str;
 
-	i = 0;
-	while (s[i])
-	{
-		f(i, (s + i));
-		i++;
-	}
+	str =  ft_strjoin(s, "\n");
+	write(fd, str, ft_strlen(str));
 }
