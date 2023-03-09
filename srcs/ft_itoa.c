@@ -6,12 +6,11 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:18:21 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/07 18:39:30 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/07 19:10:16 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_str_rev_digits(char *temp, int nbr)
 {
