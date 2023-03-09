@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 17:01:22 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/09 12:05:45 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/09 12:24:15 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,5 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 size_t	ft_strlcat(char * restrict dest, const char * restrict src, size_t dstsize);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
