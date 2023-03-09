@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:40:18 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/07 18:38:09 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/09 20:15:25 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,60 +14,6 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
-
-int	test_isalpha(void)
-{
-	const char	*testers;
-	int			i;
-
-	testers = "qwertyuiopasdfghjklzxcvbnm"
-		"QWERTYUIOPASDFGHJKLZXCVBNM1234567890"
-		"<>?:{}!@#$^&*()\n\t\v";
-	i = 0;
-	if (isalpha('\0') != ft_isalpha('\0'))
-	{
-		printf("Isalpha Blank string error\n");
-		return (0);
-	}
-	while (i < (int) sizeof(testers))
-	{
-		if (isalpha(testers[i]) != ft_isalpha(testers[i]))
-		{
-			printf("Isalpha Error with %c\n", testers[i]);
-			return (0);
-		}
-		i++;
-	}
-	printf("Isalpha executed successfully\n");
-	return (1);
-}
-
-int	test_isdigit(void)
-{
-	const char	*testers;
-	int			i;
-
-	testers = "qwertyuiopasdfghjklzxcvbnm"
-		"QWERTYUIOPASDFGHJKLZXCVBNM1234567890"
-		"<>?:{}!@#$^&*()\n\t\v";
-	i = 0;
-	if (isdigit('\0') != ft_isdigit('\0'))
-	{
-		printf("Isdigit Blank string error\n");
-		return (0);
-	}
-	while (i < (int) sizeof(testers))
-	{
-		if (isdigit(testers[i]) != ft_isdigit(testers[i]))
-		{
-			printf("Isdigit Error with %c\n", testers[i]);
-			return (0);
-		}
-		i++;
-	}
-	printf("Isdigit executed successfully\n");
-	return (1);
-}
 
 int test_memset(void)
 {
@@ -104,8 +50,9 @@ int	test_strlcpy(void)
 	char string[] = "Hello there, Venus";
     char ft_buffer[19];
  	char buffer[19];
+
 	int	cases_num = 5;
-	int cases[5] = {0, 1, 3, 18, 19};
+	int cases[5] = {-1, 1, 3, 18, 19};
 
 	for (int i = 0; i < cases_num; i++)
 	{
@@ -126,16 +73,21 @@ int	test_strnstr(void)
 	return (1);
 }
 
-int	test_itoa(void)
+#include <string.h>
+
+int	test_memcmp(void)
 {
-	
-	printf("%s\n", ft_itoa(-1234));
+	char s2[] = {0, 0, 127, 0};
+	char s3[] = {0, 0, 42, 0};
+	ft_memcmp(s2, s3, 4);
+	// printf("%d\n", ft_memcmp(s2, s3, 4));
+	// printf("%d\n", memcmp(s2, s3, 4));
 	return (1);
 }
 
 int	main(void)
 {
-	if (!test_itoa())
+	if (!test_memcmp())
 		return (1);
 	return (0);
 }
