@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 08:14:53 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/07 08:36:48 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:02:20 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*join;
-	int	s1_len;
-	int	s2_len;
+	int		s1_len;
+	int		s2_len;
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);

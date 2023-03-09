@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 13:08:43 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/06 09:30:08 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:03:49 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *) haystack);
 	while (*haystack && ((int) len - needle_len) > 0)
 	{	
-		if ((haystack[0] == needle[0]) &&
-		(ft_strncmp(haystack, needle, needle_len) == 0))
+		if ((haystack[0] == needle[0])
+			&& (ft_strncmp(haystack, needle, needle_len) == 0))
 			return ((char *) haystack);
 		haystack++;
 		len--;

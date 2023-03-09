@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:18:21 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/07 19:10:16 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:03:21 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_str_rev_digits(char *temp, int nbr)
 {
 	int	i;
-	
+
 	i = 0;
 	if (nbr == -2147483648)
 		return ("8463847412");
@@ -23,7 +23,7 @@ void	*ft_str_rev_digits(char *temp, int nbr)
 		nbr = -nbr;
 	if (nbr == 0)
 		return ("0");
-	while(nbr > 0)
+	while (nbr > 0)
 	{
 		temp[i++] = nbr % 10 + '0';
 		nbr /= 10;
@@ -34,10 +34,10 @@ void	*ft_str_rev_digits(char *temp, int nbr)
 
 char	*ft_itoa(int nbr)
 {
-	char *result;
-	char *temp;
-	int	i;
-	int	j;
+	char	*result;
+	char	*temp;
+	int		i;
+	int		j;
 
 	temp = (char *)malloc(sizeof(char) * 12);
 	result = (char *)malloc(sizeof(char) * 12);

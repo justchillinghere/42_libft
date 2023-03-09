@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 16:24:00 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/06 18:20:30 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:02:48 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*substr;
-	int	free_space;
+	int			free_space;
 
 	free_space = (ft_strlen(s) - (int) start);
 	if (free_space <= (int) len)
