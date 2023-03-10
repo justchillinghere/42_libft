@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 16:24:00 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/09 15:02:48 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/10 18:27:26 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*substr;
-	int			free_space;
+	size_t			free_space;
 
-	free_space = (ft_strlen(s) - (int) start);
-	if (free_space <= (int) len)
+	free_space = (ft_strlen(s) - (size_t) start);
+	if (free_space >  ft_strlen(s))
+		return (ft_strdup("\0"));
+	if (free_space <= len)
 		return (ft_strdup(s + start));
-	substr = (char *)malloc(sizeof(s) * (len + 1));
-	if ((void *)0 == substr)
-		return ((void *)0);
+	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!substr)
+		return (NULL);
 	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }
