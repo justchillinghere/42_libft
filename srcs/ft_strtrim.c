@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 08:45:17 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/07 16:24:42 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/10 18:54:00 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		len;
-	char	*dup;
+	size_t		len;
+	char	*trim;
 
-	dup = ft_strdup(s1);
-	len = ft_strlen(dup);
-	while (ft_strchr(set, *dup) && *dup)
-		dup++;
-	while (ft_strchr(set, dup[len - 1]))
-	{	
-		dup[len - 1] = '\0';
+	while (ft_strchr(set, *s1) && *s1)
+		s1++;
+	len = ft_strlen(s1);
+	while (len && ft_strchr(set, s1[len - 1]))
 		len--;
-	}
-	return (dup);
+	trim = (char *)malloc(sizeof(char) * len + 1);
+	if (!trim)
+		return (NULL);
+	ft_strlcpy(trim, s1, len + 1);
+	return (trim);
 }

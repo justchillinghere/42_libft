@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:40:18 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/09 22:16:35 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/10 18:53:08 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,29 +65,17 @@ int	test_strlcpy(void)
 	return (1);
 }
 
-int	test_strnstr(void)
+int	test_strtrim(void)
 {
-	
-	printf("%s\n", (strnstr("lorem ipsum dolor sit amet", "dolor", 0)));
-	printf("%s\n", (ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0)));
-	return (1);
-}
-
-#include <string.h>
-
-int	test_memcmp(void)
-{
-	char s2[] = {0, 0, 127, 0};
-	char s3[] = {0, 0, 42, 0};
-	ft_memcmp(s2, s3, 4);
-	// printf("%d\n", ft_memcmp(s2, s3, 4));
-	// printf("%d\n", memcmp(s2, s3, 4));
+	char	*s = ft_strtrim("   xxx   xxx", " x");
+	printf("%s\n", s);
+	printf("%zu\n", ft_strlen(s));
 	return (1);
 }
 
 int	main(void)
 {
-	if (!test_strnstr())
+	if (!test_strtrim())
 		return (1);
 	return (0);
 }
