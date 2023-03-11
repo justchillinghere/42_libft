@@ -64,7 +64,7 @@ $(LIB_NAME) : $(OBJ_PATHS)
 	ranlib $@
 
 test: $(LIB_NAME)
-	./libft-war-machine/grademe.sh
+	./libft-war-machine/grademe.sh $(TEST_FILE)
 
 clean :
 	rm -f $(OBJ_PATHS)
