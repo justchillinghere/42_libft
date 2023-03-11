@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:18:21 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/11 10:41:45 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/11 18:05:49 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_itoa(int nbr)
 	if (!result)
 		return (NULL);
 	if (nbr == -2147483648)
-		return(ft_memcpy(result, "-2147483648", size + 1));
+		return (ft_memcpy(result, "-2147483648", size + 1));
 	else if (nbr < 0)
 	{
 		*result = '-';

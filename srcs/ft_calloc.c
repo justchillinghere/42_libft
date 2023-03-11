@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 21:42:53 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/09 23:05:20 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/11 18:03:43 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	res;
 
 	res = count * size;
-	if (count != res / size)
+	if (size == 0 || count == 0 || (count != res / size))
 		return (NULL);
 	loc = (void *) malloc(res);
 	if (!loc)

@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 08:45:17 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/10 18:54:00 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/11 18:05:32 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t		len;
+	size_t	len;
 	char	*trim;
 
 	while (ft_strchr(set, *s1) && *s1)
