@@ -6,50 +6,55 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:18:21 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/09 15:03:21 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/11 10:41:45 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_str_rev_digits(char *temp, int nbr)
+int	ft_find_size(int n)
 {
-	int	i;
+	int	size;
 
-	i = 0;
-	if (nbr == -2147483648)
-		return ("8463847412");
-	else if (nbr < 0)
-		nbr = -nbr;
-	if (nbr == 0)
-		return ("0");
-	while (nbr > 0)
+	size = 0;
+	if (n < 0 || n == 0)
+		size++;
+	while (n != 0)
 	{
-		temp[i++] = nbr % 10 + '0';
-		nbr /= 10;
+		size++;
+		n /= 10;
 	}
-	temp[i] = '\0';
-	return (temp);
+	return (size);
+}
+
+void	putchar_rev(char *dest, int nbr)
+{
+	if (nbr < 10)
+		*dest = nbr + '0';
+	else
+	{
+		*dest = nbr % 10 + '0';
+		putchar_rev(dest - 1, nbr / 10);
+	}
 }
 
 char	*ft_itoa(int nbr)
 {
 	char	*result;
-	char	*temp;
-	int		i;
-	int		j;
+	int		size;
 
-	temp = (char *)malloc(sizeof(char) * 12);
-	result = (char *)malloc(sizeof(char) * 12);
-	if (!result || !temp)
+	size = ft_find_size(nbr);
+	result = (char *)malloc(sizeof(char) * size + 1);
+	if (!result)
 		return (NULL);
-	temp = ft_str_rev_digits(temp, nbr);
-	i = ft_strlen(temp) - 1;
-	j = 0;
-	if (nbr < 0)
-		result[j++] = '-';
-	while (i > -1)
-		result[j++] = temp[i--];
-	result[j] = '\0';
+	if (nbr == -2147483648)
+		return(ft_memcpy(result, "-2147483648", size + 1));
+	else if (nbr < 0)
+	{
+		*result = '-';
+		nbr = -nbr;
+	}
+	putchar_rev(result + size - 1, nbr);
+	result[size] = '\0';
 	return (result);
 }

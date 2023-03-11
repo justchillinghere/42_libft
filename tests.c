@@ -6,7 +6,7 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:40:18 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/10 18:53:08 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/11 10:38:09 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,15 @@ int	test_strtrim(void)
 	return (1);
 }
 
+int	test_itoa(void)
+{
+	printf("%s\n", ft_itoa(-2147483648));
+	return (1);
+}
+
 int	main(void)
 {
-	if (!test_strtrim())
+	if (!test_itoa())
 		return (1);
 	return (0);
 }
