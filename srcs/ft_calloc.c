@@ -6,11 +6,20 @@
 /*   By: luchitel <luchitel@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 21:42:53 by luchitel          #+#    #+#             */
-/*   Updated: 2023/03/11 18:03:43 by luchitel         ###   ########.fr       */
+/*   Updated: 2023/03/12 14:08:49 by luchitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	is_overflow(size_t res, size_t count, size_t size)
+{
+	if (count == 0 || size == 0)
+		return (0);
+	else if (count == res / size)
+		return (0);
+	return (1);
+}
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -18,7 +27,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	res;
 
 	res = count * size;
-	if (size == 0 || count == 0 || (count != res / size))
+	if (is_overflow(res, count, size))
 		return (NULL);
 	loc = (void *) malloc(res);
 	if (!loc)
